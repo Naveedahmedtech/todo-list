@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawsome link -->
+    <link
+      rel="stylesheet"
+      href="assets/css/fontawesome-free-6.4.0-web/css/all.min.css"
+    />
+    <!-- extrnal css -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>My Todo List</title>
+  </head>
+  <body>
+    <!-- header section -->
+    <section class="header-section">
+      <header>
+        <div class="top-heading">
+          <h1>The Ultimate Task Manager</h1>
+          <p>Never forget a task again - enter your to-do list below</p>
+        </div>
+        <!-- add task -->
+        <div class="task-container">
+          <div class="form-container">
+            <div class="main-heading">
+              <h3 class="main-head">Add Tasks</h3>
+            </div>
+            <form action="" class="task-form">
+              <div class="input-container">
+                <input
+                  type="text"
+                  id="enter-task"
+                  class="task-input"
+                  placeholder="What do you want to do?"
+                />
+                <!-- hidden input -->
+                <input type="text" hidden class="hidden-task" value="">
+              </div>
+              <div class="input-container priority-container">
+                <input
+                type="text"
+                class="task-input show-priority-menu"
+                value="Regular"
+                readonly
+                />
+                <!-- hidden input -->
+                <input type="text" hidden class="hidden-priorities" value="">
+                <div class="priority-menu">
+                  <ul class="ul">
+                    <p class="items">Regular</p>
+                    <p class="items">Important</p>
+                    <p class="items">Less Important</p>
+                </ul>
+                </div>
+                <div class="drop-icon">
+                  <i class="fa-sharp fa-solid fa-angle-down down-icon"></i>
+                </div>
+              </div>
+              <div class="add-btn">
+                <!-- <i class="fa-solid fa-plus add"></i> -->
+                <p>Add</p>
+              </div>
+              <div class="add-btn save">
+                <!-- <i class="fa-solid fa-plus add"></i> -->
+                <p>Save</p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </header>
+    </section>
+    <!-- task section -->
+    <section class="task-container">
+      <header>
+        <div class="main-heading">
+          <h3 class="main-head">Tasks</h3>
+        </div>
+        <div class="table-container">
+            <div class="nav-container">
+                <nav>
+                    <a href="#" class="nav-links active" data-id="all">All</a>
+                    <a href="#" class="nav-links" data-id="pending">Pending</a>
+                    <a href="#" class="nav-links" data-id="completed">Completed</a>
+                </nav>
+                <div class="clear-all">
+                  <span>Total: <span class="items-lenght"></span></span>
+                    <button class="clear">Clear All</button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+              <table class="table-content">
+                  <thead>
+                      <tr>
+                          <th>Items</th>
+                          <th>Status</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody class="items-container active-items" id="all">
+                    <!-- Handling js -->
+                  </tbody>
+                  <tbody class="items-container b" id="pending">
+                    <!-- Handling js -->
+                  </tbody>
+                  <tbody class="items-container h" id="completed">
+                    <!-- Handling js -->
+                  </tbody>
+              </table>
+            </div>
+        </div>
+      </header>
+    </section>
+
+    <!-- external script -->
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
